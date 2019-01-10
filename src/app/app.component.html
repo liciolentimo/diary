@@ -7,19 +7,21 @@
       
   </div>
   <label for="Entry">Entry</label>
-  <textarea class="form-control" id="txtarea" [(ngModel)]="model.entry" name="entry" required #entry="ngModel"></textarea><br>
+  <textarea id="txtarea" rows="4" cols="50" [(ngModel)]="model.entry" name="entry" required #entry="ngModel"></textarea><br>
   <div [hidden]="entry.valid || entry.pristine" class="alert alert-danger">
       <p> Entry is Required</p>
       
   </div>
-  <p>Written on {{ model.date | date:"dd/MM/yy" }}</p>
-  <button id="btndelete" (click)="onDelete()" class="btn btn-danger">Delete</button>
+  <p id="time">Written on {{ model.date | date:'fullDate' }}</p>
+  <button id="btndelete" class="btn btn-danger">Delete</button>
   <button id="btnadd" (ngSubmit)="onSubmit()" class="btn btn-primary">Add</button>
 </form><br>
 
 <div>
     <h2>Diary Entry:</h2>
-    <p>{{ currentEntry }}</p>
+    <!-- <p>{{ currentEntry }}</p> -->
+    <p><span>Title: </span>{{model.title}}</p>
+    <p><span>Entry: </span>{{model.entry}}</p>
   </div>
 
   <!-- <div class="container">

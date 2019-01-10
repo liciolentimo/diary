@@ -16,9 +16,9 @@ export class AppComponent {
   //   this.addEntry.emit(this.newEntry);
   // }
 
-  onSubmit() {
-    console.log(this.title, this.currentEntry);
-  }
+  // onSubmit() {
+  //   console.log(this.title, this.currentEntry);
+  // }
 
   
   constructor() { }
@@ -26,7 +26,7 @@ export class AppComponent {
   ngOnInit() {
   }
 
-  get currentEntry() { return JSON.stringify(this.model); }
+  // get currentEntry() { return JSON.stringify(this.model); }
 
 
 }
