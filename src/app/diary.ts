@@ -1,2 +1,7 @@
 export class Diary {
+   
+    onAdd(){
+    
+    }
 }
+

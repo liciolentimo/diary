@@ -1,6 +1,7 @@
 <h1>Diary</h1>
 <form>
   <textarea id="txtarea" rows="4" cols="50"></textarea><br>
-  <button id="btndelete" class="btn btn-danger">Delete</button>
-  <button id="btnadd" class="btn btn-primary">Add</button>
+  <p>Written on {{ date | date: 'short' }}</p>
+  <button id="btndelete" (click)="onDelete()" class="btn btn-danger">Delete</button>
+  <button id="btnadd" (click)="onAdd()" class="btn btn-primary">Add</button>
 </form>
