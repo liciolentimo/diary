@@ -1,12 +1,20 @@
 <h1>Diary</h1>
 <form>
   <label for="Title">Title</label>
-  <input id="input" class="form-group" [(ngModel)]="model.title" name="title"><br>
+  <input id="input" class="form-group" [(ngModel)]="model.title" name="title" required #title="ngModel"><br>
+  <div [hidden]="title.valid || title.pristine" class="alert alert-danger">
+      <p> Title is Required</p>
+      
+  </div>
   <label for="Entry">Entry</label>
-  <textarea class="form-control" id="txtarea" [(ngModel)]="model.entry" name="entry"></textarea><br>
+  <textarea class="form-control" id="txtarea" [(ngModel)]="model.entry" name="entry" required #entry="ngModel"></textarea><br>
+  <div [hidden]="entry.valid || entry.pristine" class="alert alert-danger">
+      <p> Entry is Required</p>
+      
+  </div>
   <p>Written on {{ today | date: 'short' }}</p>
   <button id="btndelete" (click)="onDelete()" class="btn btn-danger">Delete</button>
-  <button id="btnadd" (click)="onAdd()" class="btn btn-primary">Add</button>
+  <button id="btnadd" (ngSubmit)="onSubmit()" class="btn btn-primary">Add</button>
 </form><br>
 
 <div>
