@@ -7,9 +7,9 @@ import { Diary } from './diary';
 })
 export class DatetimePipe implements PipeTransform {
 
-  transform(value: any, args?: any): any {
+  transform(value: any): string {
     let today:Date = new Date(); //get current date and time
-    return today;
+    return value;
   }
 
 }

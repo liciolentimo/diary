@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DatetimePipe } from './datetime.pipe';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DatetimePipe
+    DatetimePipe,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,

@@ -12,7 +12,7 @@
       <p> Entry is Required</p>
       
   </div>
-  <p>Written on {{ today | date: 'short' }}</p>
+  <p>Written on {{ model.date | date:"dd/MM/yy" }}</p>
   <button id="btndelete" (click)="onDelete()" class="btn btn-danger">Delete</button>
   <button id="btnadd" (ngSubmit)="onSubmit()" class="btn btn-primary">Add</button>
 </form><br>
@@ -21,3 +21,9 @@
     <h2>Diary Entry:</h2>
     <p>{{ currentEntry }}</p>
   </div>
+
+  <!-- <div class="container">
+  <div class="row">
+    <app-root (addEntry)="addNewEntry($event)"></app-root>
+  </div>
+  </div> -->

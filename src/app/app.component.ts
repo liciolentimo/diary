@@ -8,7 +8,19 @@ import { Diary } from './diary';
 })
 export class AppComponent {
   title = 'Diary';
-  model = new Diary('','');
+  model = new Diary('','',new Date());
+  // newEntry = new Diary("","");
+  // @Output() addEntry = new EventEmitter<Diary>();
+
+  // onSubmit(){
+  //   this.addEntry.emit(this.newEntry);
+  // }
+
+  onSubmit() {
+    console.log(this.title, this.currentEntry);
+  }
+
+  
   constructor() { }
  
   ngOnInit() {
