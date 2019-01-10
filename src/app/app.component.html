@@ -1,7 +1,15 @@
 <h1>Diary</h1>
 <form>
-  <textarea id="txtarea" rows="4" cols="50"></textarea><br>
-  <p>Written on {{ date | date: 'short' }}</p>
+  <label for="Title">Title</label>
+  <input id="input" class="form-group" [(ngModel)]="model.title" name="title"><br>
+  <label for="Entry">Entry</label>
+  <textarea class="form-control" id="txtarea" [(ngModel)]="model.entry" name="entry"></textarea><br>
+  <p>Written on {{ today | date: 'short' }}</p>
   <button id="btndelete" (click)="onDelete()" class="btn btn-danger">Delete</button>
   <button id="btnadd" (click)="onAdd()" class="btn btn-primary">Add</button>
-</form>
+</form><br>
+
+<div>
+    <h2>Diary Entry:</h2>
+    <p>{{ currentEntry }}</p>
+  </div>

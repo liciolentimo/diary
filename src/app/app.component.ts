@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Diary } from './diary';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Diary';
+  model = new Diary('','');
+  constructor() { }
+ 
+  ngOnInit() {
+  }
+
+  get currentEntry() { return JSON.stringify(this.model); }
+
+
 }

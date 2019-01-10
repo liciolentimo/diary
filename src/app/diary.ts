@@ -1,7 +1,4 @@
 export class Diary {
-   
-    onAdd(){
-    
-    }
+    constructor(public title:string,public entry:string){}
 }
 
